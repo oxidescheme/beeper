@@ -1,0 +1,225 @@
+/* === ROOT VARIABLES — OXIDE (DARK ONLY) === */
+:root {
+    /* Font and Layout Variables */
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+
+    --header-height: 48px;
+    --filters-pane-width: 220px;
+    --min-sidebar-width: 280px;
+    --max-sidebar-width: 800px;
+    --threads-list-item-height: 54px;
+
+    --pinned-thread-base-size: 64px;
+    --pinned-thread-group-img-size: calc(var(--pinned-thread-base-size) / 1.5);
+    --pinned-thread-height: calc(var(--pinned-thread-base-size) + (var(--pinned-thread-base-size) / 1.4));
+    --pinned-thread-width: calc(var(--pinned-thread-base-size) + (var(--pinned-thread-base-size) / 2.5));
+
+    /* Base Colors — Oxide */
+    --color-bg: #161616;                /* base */
+    --color-bg-rgb: 22, 22, 22;
+    --color-fg: #cecece;                /* text */
+    --color-fg-rgb: 206, 206, 206;
+
+    /* Primary accent: Oxide Blue */
+    --color-primary: #3ba6f5;
+    --color-primary-rgb: 59, 166, 245;
+
+    /* Base Color Tokens */
+    --color-base-black: #121212;        /* mantle */
+    --color-base-black-rgb: 18, 18, 18;
+    --color-base-white: #cecece;        /* text */
+    --color-base-white-rgb: 206, 206, 206;
+
+    /* Gray Scale / UI Surfaces */
+    --color-base-gray-10: #121212;      /* mantle */
+    --color-base-gray-10-rgb: 18, 18, 18;
+    --color-base-gray-20: #161616;      /* base */
+    --color-base-gray-20-rgb: 22, 22, 22;
+    --color-base-gray-30: #222222;      /* surface0 */
+    --color-base-gray-30-rgb: 34, 34, 34;
+    --color-base-gray-40: #262626;      /* surface1 */
+    --color-base-gray-40-rgb: 38, 38, 38;
+    --color-base-gray-50: #555555;      /* subtext2 */
+    --color-base-gray-50-rgb: 85, 85, 85;
+    --color-base-gray-60: #8f8f8f;      /* subtext1 */
+    --color-base-gray-60-rgb: 143, 143, 143;
+    --color-base-gray-70: #bebebe;      /* subtext0 */
+    --color-base-gray-70-rgb: 190, 190, 190;
+    --color-base-gray-80: #cecece;      /* text */
+    --color-base-gray-80-rgb: 206, 206, 206;
+    --color-base-gray-100: #cecece;     /* text */
+    --color-base-gray-100-rgb: 206, 206, 206;
+    --color-base-gray-110: #dedede;     /* bright_text */
+    --color-base-gray-110-rgb: 222, 222, 222;
+    --color-base-gray-120: #dedede;     /* max contrast */
+    --color-base-gray-120-rgb: 222, 222, 222;
+
+    /* Syntax Palette — Oxide */
+    --color-dracula-red: #ed756e;
+    --color-dracula-orange: #e48233;
+    --color-dracula-yellow: #c39900;
+    --color-dracula-green: #5bb661;
+    --color-dracula-cyan: #00b3d6;
+    --color-dracula-purple: #968ff7;
+    --color-dracula-pink: #cc7bd1;
+    --color-dracula-comment: #555555;
+
+    /* Backgrounds */
+    --color-background-app: var(--color-bg);
+    --color-background-app-weak: var(--color-base-gray-20);
+    --color-background-elevated: var(--color-base-gray-30);
+    --color-background-elevated-hover: var(--color-base-gray-40);
+    --color-background-grouped: var(--color-base-gray-20);
+    --color-background-grouped-weak: var(--color-base-gray-10);
+    --color-background-object: var(--color-base-gray-30);
+
+    /* Buttons */
+    --color-background-button-primary: var(--color-primary);
+    --color-background-button-primary-active: #6fc6ff; /* bright_blue */
+    --color-background-button-primary-disabled: #555555;
+    --color-background-button-secondary: var(--color-base-gray-30);
+    --color-background-button-secondary-active: var(--color-base-gray-40);
+    --color-background-button-secondary-disabled: var(--color-base-gray-20);
+    --color-background-button-translucent: rgba(var(--color-base-white-rgb), 0.1);
+    --color-background-button-translucent-active: rgba(var(--color-base-white-rgb), 0.15);
+    --color-background-button-translucent-disabled: rgba(var(--color-base-white-rgb), 0.05);
+
+    /* Sidebar */
+    --color-background-sidebar: rgba(var(--color-base-gray-20-rgb), 0.85);
+    --color-background-sidebar-opaque: var(--color-base-gray-20);
+    --color-background-sidebar-thread-focus: rgba(var(--color-base-white-rgb), 0.08);
+    --color-background-sidebar-thread-selected: var(--color-background-selected-primary);
+    --color-background-sidebar-thread-selected-unfocused: rgba(var(--color-base-white-rgb), 0.12);
+
+    /* Messages */
+    --color-background-message-active: var(--color-base-gray-30);
+    --color-background-message-bubble-received: var(--color-base-gray-40);
+    --color-background-message-bubble-sent: #213546; /* ice */
+    --color-background-message-bubble-linked: var(--color-base-gray-30);
+
+    /* Selected States */
+    --color-background-selected-primary: var(--color-primary);
+    --color-background-selected-secondary: rgba(var(--color-base-white-rgb), 0.1);
+
+    /* Inputs */
+    --color-background-input: var(--color-base-gray-30);
+    --color-background-kbd: rgba(var(--color-base-white-rgb), 0.15);
+
+    /* Header/Menu */
+    --color-background-header-right: rgba(var(--color-base-gray-20-rgb), 0.9);
+    --color-background-header-right-opaque: var(--color-base-gray-20);
+    --color-background-menu: rgba(var(--color-base-gray-30-rgb), 0.9);
+    --color-background-menu-opaque: var(--color-base-gray-30);
+    --color-background-menu-option-hover: #3ba6f5;
+
+    /* Borders */
+    --color-border-neutrals: var(--color-base-gray-30);
+    --color-border-neutrals-strong: var(--color-base-gray-40);
+    --color-border-neutrals-weak: var(--color-base-gray-20);
+    --color-border-input: var(--color-base-gray-40);
+    --color-border-input-active: var(--color-base-gray-50);
+    --color-border-translucent: rgba(var(--color-base-white-rgb), 0.1);
+    --color-border-translucent-strong: rgba(var(--color-base-white-rgb), 0.15);
+    --color-border-translucent-strongest: rgba(var(--color-base-white-rgb), 0.5);
+    --color-border-translucent-weak: rgba(var(--color-base-white-rgb), 0.05);
+
+    /* Text */
+    --color-text-neutrals: var(--color-fg);
+    --color-text-neutrals-subtle: #bebebe; /* subtext0 */
+    --color-text-neutrals-weak: #8f8f8f; /* subtext1 */
+    --color-text-on-accent: #121212;
+    --color-text-on-accent-weak: rgba(18, 18, 18, 0.8);
+    --color-text-translucent: rgba(var(--color-base-white-rgb), 0.9);
+    --color-text-translucent-subtle: rgba(var(--color-base-white-rgb), 0.6);
+    --color-text-translucent-weak: rgba(var(--color-base-white-rgb), 0.75);
+
+    /* Icons */
+    --color-icon-neutrals: #bebebe;
+    --color-icon-neutrals-strong: var(--color-fg);
+    --color-icon-neutrals-subtle: #8f8f8f;
+    --color-icon-neutrals-weak: #555555;
+    --color-icon-on-accent: rgba(18, 18, 18, 0.85);
+    --color-icon-on-accent-strong: rgba(18, 18, 18, 0.95);
+    --color-icon-on-accent-weak: rgba(18, 18, 18, 0.6);
+    --color-icon-translucent: rgba(var(--color-base-white-rgb), 0.6);
+    --color-icon-translucent-strong: rgba(var(--color-base-white-rgb), 0.9);
+    --color-icon-translucent-subtle: rgba(var(--color-base-white-rgb), 0.3);
+    --color-icon-translucent-weak: rgba(var(--color-base-white-rgb), 0.4);
+
+    /* Scrollbar */
+    --color-background-scrollbar: rgba(var(--color-base-white-rgb), 0.3);
+    --color-background-scrollbar-hover: rgba(var(--color-base-white-rgb), 0.5);
+
+    /* Misc */
+    --color-background-tag: rgba(var(--color-base-white-rgb), 0.1);
+    --color-overlay-modal: rgba(0, 0, 0, 0.4);
+    --color-transparent: rgba(0, 0, 0, 0);
+
+    /* Panes */
+    --left-pane-bg: transparent;
+    --right-pane-bg: rgba(var(--color-bg-rgb), 1);
+
+    /* Audio Bar */
+    --compose-message-accent: #dedede;
+    --audio-bar-button: #cecece;
+    --audio-bar-preview-progress: #dedede;
+    --audio-bar-bg: #222222;
+    --audio-bar-border: #555555;
+
+    /* Keyboard Keys */
+    --key-border: linear-gradient(to bottom, #262626, #222222);
+    --key-bg: linear-gradient(to bottom, #262626, #161616);
+    --color-key-bottom-bg: #222222;
+
+    /* Preferences */
+    --prefs-well: #121212;
+
+    /* Functional Colors */
+    --functional-red: #ed756e;
+    --functional-orange: #e48233;
+    --functional-green: #5bb661;
+    --functional-cyan: #00b3d6;
+    --functional-purple: #968ff7;
+
+    --focus-ring: var(--functional-purple);
+    --link-color: var(--color-primary);
+    --danger-bg: var(--functional-red);
+    --success-bg: var(--functional-green);
+    --warning-bg: var(--functional-orange);
+
+    /* Legacy/Status */
+    --mark-bg: #555555;
+    --error-color: var(--functional-red);
+    --warning-color: var(--functional-orange);
+    --snoozed-indicator-bg: var(--functional-orange);
+    --error-indicator-bg: var(--error-color);
+    --message-snoozed-border: var(--functional-orange);
+    --message-errored-beacon: var(--error-color);
+    --sms-sent-bg: var(--functional-green);
+
+    /* ANSI — Oxide */
+    --ansi-black: #121212;
+    --ansi-red: #ed756e;
+    --ansi-green: #5bb661;
+    --ansi-yellow: #c39900;
+    --ansi-blue: #3ba6f5;
+    --ansi-magenta: #cc7bd1;
+    --ansi-cyan: #00baaa;
+    --ansi-white: #cecece;
+    --ansi-bright-black: #555555;
+    --ansi-bright-red: #ff9890;
+    --ansi-bright-green: #7bd77f;
+    --ansi-bright-yellow: #e3b831;
+    --ansi-bright-blue: #6fc6ff;
+    --ansi-bright-magenta: #dd8be2;
+    --ansi-bright-cyan: #00dcca;
+    --ansi-bright-white: #dedede;
+}
+
+/* === TRANSPARENCY OVERRIDES === */
+.no-transparency,
+.reduce-transparency {
+    --left-pane-bg: var(--color-background-sidebar-opaque);
+    --color-background-header-right: var(--color-background-header-right-opaque);
+    --color-background-menu: var(--color-background-menu-opaque);
+}
